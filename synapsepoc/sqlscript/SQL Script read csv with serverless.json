@@ -1,5 +1,5 @@
 {
-	"name": "SQL Script read with serverless",
+	"name": "SQL Script read csv with serverless",
 	"properties": {
 		"content": {
 			"query": "-- This is auto-generated code\nSELECT\n    TOP 100 *\nFROM\n    OPENROWSET(\n        BULK 'https://conaw6cb5rqzwvm2poc.dfs.core.windows.net/public/trip-data.csv',\n        FORMAT = 'CSV',\n        PARSER_VERSION = '2.0',\n        HEADER_ROW = TRUE\n    ) AS [result]\n",
